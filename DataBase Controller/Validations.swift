@@ -10,7 +10,7 @@ import Foundation
 
 class Validations {
    
-    //MARK : Mobile Validation
+    //MARK : MOBILE
     
     static func validate_mobile(mobile:String)->Bool {
         let set = CharacterSet(charactersIn: "0123456789")
@@ -22,7 +22,7 @@ class Validations {
         }
     }
     
-    //MARK: Name Validation
+    //MARK: NAME
     
     static func validate_name(name:String)->Bool {
         let nameRX = "^[a-zA-Z]+$"

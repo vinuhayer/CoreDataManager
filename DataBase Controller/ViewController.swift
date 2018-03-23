@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var nameOutlet: UITextField!
     @IBOutlet weak var mobileOutlet: UITextField!
     
+//MARK: PROPERTIES
+    
     let user = DBController(nameOfEntity: "Person") //intializing the DBController
     var personData = [Person]()
     var currentIndex:Int?
@@ -81,7 +83,8 @@ class ViewController: UIViewController {
     }
 }
 
-//Table View Methods
+//MARK: TABLE VIEW METHODS
+
 extension ViewController:UITableViewDataSource,UITableViewDelegate {
    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -123,10 +126,10 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         currentIndex=indexPath.row //storing index of selected row
     }
-    
 }
 
-//TextField Methods
+//MARK: TEXT FIELD METHODS
+
 extension ViewController:UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -160,7 +163,4 @@ extension ViewController:UITextFieldDelegate {
             print("No error in Data.")
         }
     }
-    
 }
-
-
